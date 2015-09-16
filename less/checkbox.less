@@ -1,0 +1,99 @@
+/* Begin s-checkbox
+================================================== */
+
+
+/*
+<label class="s-checkbox">
+    <input type="checkbox" name="" id="username" value="johndoe">
+    <i class="fa fa-check"></i>
+    <b class="bg"></b>
+</label>
+*/
+
+.s-checkbox {
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #c2c2c2;
+    border-radius: 0;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    margin: 0;
+    position: relative;
+    top: 3px;
+    &.radio {
+        border-radius: 30px;
+        > input, > input, > i, > .bg {
+            border-radius: 30px;
+        }
+        
+    }
+}
+
+.s-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.s-checkbox i {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    position: absolute;
+    opacity: 0;
+    left: 1px;
+    top: 1px;
+    z-index: 9;
+    font-size: 12px;
+    line-height: 10px;
+}
+
+.s-checkbox b.bg {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+}
+
+.s-checkbox input:checked + i {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    opacity: 1;
+}
+
+.s-checkbox input:checked ~ b.bg {
+    background: #ffffff;
+}
+
+.lte8 .s-checkbox {
+    border: none;
+    border-radius: 0;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    margin: 0;
+    position: relative;
+    top: 3px;
+}
+
+.lte8 .s-checkbox input {
+    position: absolute;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.lte8 .s-checkbox b.bg {
+    display: none;
+}
+
+.lte8 .s-checkbox input:checked + i {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    opacity: 0;
+}
+
+
+/* End s-checkbox
+================================================== */
